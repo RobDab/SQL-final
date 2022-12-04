@@ -1,0 +1,49 @@
+--9
+
+CREATE PROCEDURE DateSearch(@Data date) 
+	
+AS
+BEGIN
+	SELECT DataViolazione, Importo, DecurtamentoPunti FROM Verbale
+	where DataVerbale = @Data
+END
+GO
+
+__________________________________________________
+
+-- SP 1
+
+CREATE PROCEDURE SearchYear (@Year int)
+	
+AS
+BEGIN
+	SELECT * FROM Verbale
+	WHERE Year(DataViolazione) = @YEAR 
+END
+GO
+
+__________________________________________________
+
+
+-- SP 2
+CREATE PROCEDURE TotPuntiperData (@Data date)
+	
+AS
+BEGIN
+	SELECT SUM(DecurtamentoPunti) as TotPunti FROM Verbale
+	where DataVerbale = @Data
+END
+GO
+
+__________________________________________________
+
+-- SP 3
+
+CREATE PROCEDURE DaleteVerbale (@IDVerbale int)
+
+AS
+BEGIN
+	DELETE FROM Verbale
+	where IDVerbale = @IDVerbale
+END
+GO

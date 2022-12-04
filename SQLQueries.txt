@@ -1,0 +1,140 @@
+--CREATE TABLE Anagrafica(
+--	IDAnagrafica int Primary key not null Identity,
+--	Cognome nvarchar(25) not null,
+--	Nome nvarchar(25) not null,
+--	Indirizzo nvarchar(max) not null,
+--	Città nvarchar(20) not null,
+--	CAP char(5),
+--	CF	char(16) not null
+
+--)
+
+--CREATE TABLE TipoViolazione(
+--	IDViolazione int Primary key not null Identity,
+--	Descrizione nvarchar(max) not null
+--)
+
+--CREATE TABLE Verbale(
+--	IDVerbale int Primary key not null Identity,
+--	DataViolazione date not null,
+--	IndirizzoViolazione nvarchar(max) not null,
+--	Nominativo_Agente nvarchar(40) not null,
+--	DataVerbale date not null,
+--	Importo money not null,
+--	DecurtamentoPunti int not null,
+--	IDAnagrafica int not null,
+--	IDViolazione int not null
+
+--	CONSTRAINT FK_Anagrafica_Verbale Foreign key (IDAnagrafica) References Anagrafica (IDAnagrafica),
+--	CONSTRAINT Fk_TipoViolazione_Verbale Foreign key (IDViolazione) References TipoViolazione (IDViolazione)
+--)
+
+
+--INSERT INTO Anagrafica VALUES ('Cherobosco', 'Giorgio', 'Via le mani dal naso', 'Bari', '70010', 'JHGSDFG')
+--INSERT INTO Anagrafica VALUES ('Dossapatre', 'Giovanni', 'Via Bari', 'Milano', '00019', 'FGRG54G')
+--INSERT INTO Anagrafica VALUES ('Eparchio', 'Avito', 'Via Napoli', 'Bari', '91644', 'JHGSDFG')
+--INSERT INTO Anagrafica VALUES ('Fortunaziano', 'Consulto', 'Via Papa Giovanni', 'Roma', '70121', 'FGHFDGG')
+--INSERT INTO Anagrafica VALUES ('Fulgenzio', 'Giorgio', 'Via Battista Nenna', 'Bari', '89024', '456RFBG')
+--INSERT INTO Anagrafica VALUES ('Crisostomo', 'Giovanni', 'Via XX Settembre', 'Roma', '21212', 'RHRH65G')
+--INSERT INTO Anagrafica VALUES ('Maggioriano', 'Valerio', 'Via Sparano', 'Genova', '56432', 'GFBTH65')
+--INSERT INTO Anagrafica VALUES ('Melinno', 'Marziano ', 'Corso Cavour', 'Rimini', '23123', 'GHGHFG4')
+--INSERT INTO Anagrafica VALUES ('Menandro', ' Retore', 'Via Arcide De Gasperi', 'Venezia', '09989', 'FGHDFG5')
+--INSERT INTO Anagrafica VALUES ('Palladio', 'Emiliano', 'Via Petroni', 'Bolzano', '76567', 'FGHDV4G')
+--INSERT INTO Anagrafica VALUES ('Paolino', 'Paolo', 'Via Cimmarrusti', 'Palermo', '45345', 'JKHJTB6')
+--INSERT INTO Anagrafica VALUES ('Tibero', 'Scribonio', 'Via Da Qui', 'Lecce', '34234', 'KU787HG')
+--INSERT INTO Anagrafica VALUES ('Senofonte', 'Teone', 'Via M. Ghandi', 'Terni', '78678', 'YUJBY65')
+--INSERT INTO Anagrafica VALUES ('Sannazzaro', 'Serapio', 'Via Morandi', 'Milano', '89789', 'YUIG654')
+--INSERT INTO Anagrafica VALUES ('Antemio', 'Sallustio', 'Via BohBoh', 'Roma', '90890', 'TYTGG67')
+
+
+--INSERT INTO TipoViolazione VALUES ('Parcheggio in divieto')
+--INSERT INTO TipoViolazione VALUES ('Supero limite di velocità')
+--INSERT INTO TipoViolazione VALUES ('Mancato STOP')
+--INSERT INTO TipoViolazione VALUES ('Guida in stato di ebrezza')
+--INSERT INTO TipoViolazione VALUES ('Mancanza di licenza di guida')
+--INSERT INTO TipoViolazione VALUES ('Accesso in ZTL')
+--INSERT INTO TipoViolazione VALUES ('Trasporto Animali vivi senza licenza..Ah no è la fidanzata!')
+--INSERT INTO TipoViolazione VALUES ('Utilizzo smartphone alla guida')
+--INSERT INTO TipoViolazione VALUES ('Tasso alcolemico oltre soglia')
+--INSERT INTO TipoViolazione VALUES ('Mancata revisione del veicolo')
+
+--INSERT INTO Verbale VALUES ('2009/07/15','Piazza Ferrarese','James Bond','2009/07/15',65,2,1,2)
+--INSERT INTO Verbale VALUES ('2009/04/30','Via Brunic','Mario Rossi','2009/04/30',65,1,5,1)
+--INSERT INTO Verbale VALUES ('2009/06/02','Via Sparano','Giovanni Ferrari','2009/06/02',65,0,3,9)
+--INSERT INTO Verbale VALUES ('2010/07/22','Via Bari','James Bond','2010/07/22',65,2,2,10)
+--INSERT INTO Verbale VALUES ('2017/01/30','Via Brunelleschi','Lidia Bruni','2017/01/30',65,0,9,5)
+--INSERT INTO Verbale VALUES ('2018/11/03','Via Leonardo','Katia Banchina','2018/11/03',65,1,10,3)
+--INSERT INTO Verbale VALUES ('2005/12/22','Via Milano','Giuseppe Borro','2005/12/22',65,1,13,8)
+--INSERT INTO Verbale VALUES ('2020/08/15','Via Sparano','Francesco Totti','2020/08/15',65,1,7,2)
+--INSERT INTO Verbale VALUES ('2021/03/10','Via Arcide De Gasperi','Pippo Baudo','2021/03/10',65,2,14,6)
+--INSERT INTO Verbale VALUES ('2021/07/02','Via Giovanni battista','Bon Jovi','2021/07/02', 50 ,0 ,15 ,3)
+--INSERT INTO Verbale VALUES ('2008/02/24','Via dei sapori','Mario Rossi','2008/02/24', 250 ,0 ,8 ,4)
+--INSERT INTO Verbale VALUES ('2022/02/19','Via della seta','Tony Stark','2022/02/19', 34 ,0 ,1 ,8)
+--INSERT INTO Verbale VALUES ('2021/05/17','Via del commercio','Bruce Banner','2021/05/17', 100 ,2 ,7 ,10)
+--INSERT INTO Verbale VALUES ('2020/09/28','Via mare','James Bond','2020/09/28', 28 ,1 ,12 ,5)
+--INSERT INTO Verbale VALUES ('2007/11/07','Via Rafffaello','Giovanni Ferrari','2007/11/07', 68 ,2 ,12 ,8)
+--INSERT INTO Verbale VALUES ('2007/10/15','Via Michelangelo','Clark Kent','2007/10/15', 110 ,2 ,4 ,1)
+--INSERT INTO Verbale VALUES ('2009/03/02','Via della Resistenza','Peter Parker','2009/03/02', 55 ,0 ,16 ,9)
+--INSERT INTO Verbale VALUES ('2007/07/27','Via Dattoma','Tommaso Lovergine','2007/07/27', 210 ,2 ,16 ,7)
+
+------------------------------------------------------
+
+-- ***QUERIES***
+
+--1
+SELECT COUNT(*) as TotVerbali FROM Verbale
+
+--2
+SELECT COUNT(*) as TotVerbali, IDAnagrafica FROM Verbale
+GROUP BY IDAnagrafica
+
+--3
+SELECT COUNT(*) as TotVerbali, IDViolazione FROM Verbale
+GROUP BY IDViolazione
+
+--4
+SELECT SUM(DecurtamentoPunti) as Tot_PuntiDecurtati, IDAnagrafica FROM Verbale
+GROUP BY IDAnagrafica
+
+--5 (Ho usato Roma perchè a Palermo nessuno ha infranto le regole!)
+SELECT Cognome, Nome, DataViolazione, IndirizzoViolazione, Importo, DecurtamentoPunti FROM Anagrafica
+Inner join Verbale
+ON Anagrafica.IDAnagrafica = Verbale.IDAnagrafica
+WHERE Città = 'Roma'
+
+--6
+SELECT Cognome, Nome,Indirizzo , DataViolazione, Importo, DecurtamentoPunti FROM Verbale
+Inner join Anagrafica
+ON Verbale.IDAnagrafica = Anagrafica.IDAnagrafica
+WHERE DataViolazione BETWEEN '2009/02/01' AND '2009/07/31'
+
+--7
+SELECT SUM(Importo) as TotMulte, Verbale.IDAnagrafica FROM Verbale
+inner join Anagrafica
+ON Verbale.IDAnagrafica = Anagrafica.IDAnagrafica
+GROUP BY Verbale.IDAnagrafica
+
+--8
+SELECT * FROM Anagrafica 
+where Città = 'Palermo'
+
+--9
+--VEDI FILE STORED PROCEDURE
+
+--10
+SELECT COUNT(*) as totVerbali, Nominativo_Agente FROM Verbale
+GROUP BY Nominativo_Agente
+
+--11 (non risultano violazioni con decurtamento maggiore di 5, ho usato 1 nella condizione)
+SELECT Cognome, Nome,Indirizzo , DataViolazione, Importo, DecurtamentoPunti FROM Verbale
+inner join Anagrafica
+ON Verbale.IDAnagrafica = Anagrafica.IDAnagrafica
+where DecurtamentoPunti > 1
+
+--12 (ho usato 200 nella condizione invece di 400)
+SELECT Cognome, Nome,Indirizzo , DataViolazione, Importo, DecurtamentoPunti FROM Verbale
+inner join Anagrafica
+ON Verbale.IDAnagrafica = Anagrafica.IDAnagrafica
+where Importo > 200
+
+
